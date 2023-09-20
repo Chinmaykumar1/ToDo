@@ -14,6 +14,8 @@ function App() {
 {id : 3, desc : "Leetcode", person: "chuna"},
 {id : 4, desc : "cheatcode", person: "Mnavi"}])
 
+const[showForm, setShowForm] = useState(false);
+
 const AddToDo = (task,Description)=>{
   let rowNumber =0;
   if(row.length>0){
@@ -49,9 +51,10 @@ rowNumber=row[row.length-1].id+1;
         <div className='card-body'>
        
      <Table row={row} deleteToDo={deleteToDo}/>
-     <button className='btn btn-primary' >Add To Do</button>
-     <Form AddToDo= {AddToDo}/>
+     <button onClick={()=>setShowForm(!showForm)} className='btn btn-primary' >
+      {showForm ? 'Close New ToDo' : 'New ToDo'}</button>
      
+     {showForm && <Form AddToDo= {AddToDo}/> }
       </div>
     </div>
     </div>
