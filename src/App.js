@@ -9,10 +9,10 @@ import Form from './FormToDo';
 
 
 function App() {
- const [row,setRow] = useState([{id : 1, desc : "Leetcode", person: "cheekuna" },
-{id : 2, desc : "Hacker", person: "cheek"},
-{id : 3, desc : "Leetcode", person: "chuna"},
-{id : 4, desc : "cheatcode", person: "Mnavi"}])
+ const [row,setRow] = useState([{id : 1, desc : "Tap on me", person: "To disappear" },
+{id : 2, desc : "Passion", person: "Challenging Dev"},
+{id : 3, desc : "Spring", person: "Boot"},
+{id : 4, desc : "LeetCode", person: "Chinmay"}])
 
 const[showForm, setShowForm] = useState(false);
 
